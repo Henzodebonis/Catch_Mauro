@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+:root{
+    --primary-color: #3cc3c3;
+    --light-color: #fdfdfd;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--primary-color);
+    color: var(--light-color);
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+a{
+    color: var(--light-color);
+}
+
+h1{
+    line-height: 1.4;
+    
+}
+
+.btn{
+    border: 0;
+    border-radius: 2px;
+    background: var(--light-color);
+    color: var(--primary-color);
+    padding: 15px 20px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-radius 0.7s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    border-radius: 9px;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 1s ease-out ;
+}
+
+.screen.up{
+    margin-top: -100vh;
+}
+
+.mauro-list{
+display: flex;
+flex-wrap: wrap;
+list-style-type: none;
+justify-content: center;
+padding: 0;
+}
+
+.mauro-list li{
+    margin: 10px;
+}
+
+.choose-mauro-btn{
+    background-color: transparent;
+    border: 2px solid var(--light-color);
+    border-radius: 2px;
+    color: var(--light-color);
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
+    transition: border-radius 0.7s ease;
+}
+
+.choose-mauro-btn:hover{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border-radius: 9px;
+}
+
+.choose-mauro-btn:active{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-mauro-btn img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+.game-container{
+    position: relative;
+}
+
+.time, .score{
+    position: absolute;
+    top: 20px;
+}
+
+.time{
+    left: 20px;
+}
+
+.score{
+    right: 20px;
+}
+
+.message{
+    line-height: 1.7;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+}
+
+.message.visible{
+    opacity: 1;
+    transform: translate(-50%, 150%);
+}
+
+.mauro{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mauro.caught{
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.mauro img{
+    width: 100px;
+    height: 110px;
+}
+
+@media(max-width: 414px){
+  .screen{
+      width: 517px;
+      height: 120vh;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .screen.up{
+    margin-top: -120vh;
+}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Catch Mauro</title>
+</head>
+
+<body>
+    <div class="screen">
+        <h1>Catch the Mauro</h1>
+        <button class="btn" id="start-btn">Play Game</button>
+    </div>
+
+    <div class="screen">
+        <h1>Choose your favourite Mauro</h1>
+        <ul class="mauro-list">
+            <li>
+                <button class="choose-mauro-btn">
+                    <p>Young</p>
+                    <img src="img/Young_Mauro.png" alt="young">
+                </button>
+            </li>
+            <li>
+                <button class="choose-mauro-btn">
+                    <p>Middle</p>
+                    <img src="img/Middle_Mauro.png" alt="middle">
+                </button>
+            </li>
+            <li>
+                <button class="choose-mauro-btn">
+                    <p>Old</p>
+                    <img src="img/Old_Mauro.png" alt="old">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+        <h3 id="time" class="time">Time: 00:00</h3>
+        <h3 id="score" class="score">Score: 0</h3>
+        <h5 id="message" class="message">
+            Don't give up, <br> catch 'em all!!'
+        </h5>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
